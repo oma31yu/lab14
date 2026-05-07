@@ -1,7 +1,9 @@
 import Link from "next/link";
 
+const baseUrl = "https://lab14-sse8.vercel.app";
+
 async function getProduct(id) {
-  const res = await fetch(`http://localhost:3000/api/products/${id}`, {
+  const res = await fetch(`${baseUrl}/api/products/${id}`, {
     cache: "no-store",
   });
 

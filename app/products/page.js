@@ -1,8 +1,10 @@
 import Link from "next/link";
 import ProductForm from "./ProductForm";
 
+const baseUrl = "https://lab14-sse8.vercel.app";
+
 async function getProducts() {
-  const res = await fetch("http://localhost:3000/api/products", {
+  const res = await fetch(`${baseUrl}/api/products`, {
     cache: "no-store",
   });
 
